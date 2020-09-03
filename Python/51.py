@@ -1,8 +1,9 @@
 #N皇后
-
+#DFS
+#行，列，对角都只能有一个Q， 同一对角线和或差相等，不能用绝对值！！！
 class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
-        def solve(x_used,diagonal_a,diagonal_b,tmp):
+        def solve(x_used,diagonal_a,diagonal_b,tmp):# x_used 竖列,diagonal_a 左斜,diagonal_b 右斜 
             y_i = len(x_used)
             if y_i == n:
                 res.append(tmp)
